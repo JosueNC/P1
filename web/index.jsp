@@ -4,14 +4,20 @@
     Author     : josue
 --%>
 
+<%@page import="br.sp.fatec.poo.Disciplina"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Índice</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <%@include file="WEB-INF/jspf/menu.jspf"%>
+        <h1>Josué Nogueira Custódio</h1>
+        <h3>RA: 1290481823019</h3>
+        <h3>Disciplinas Matriculadas:
+            <%=Disciplina.getList().size()%>
+        </h3>
     </body>
 </html>
